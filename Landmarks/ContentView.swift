@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  Landmarks
 //
-//  Created by Bianca MANUENO on 01/02/2024.
+//  Created by Bianca on 01/02/2024.
 //
 
 import SwiftUI
@@ -10,12 +10,32 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            MapView()
+                .frame(height: 300)
+            
+            CircleImage()
+                .offset(y: -130)
+                .padding(.bottom, -130)
+            
+            
+            VStack(alignment: .center) {
+                Text("Hello, Bianca !").foregroundColor(.blue)
+                    .font(.largeTitle)
+                HStack {
+                    Text("Babi est le plus doux")
+                        .font(.subheadline)
+                    Text("au monde !")
+                        .font(.subheadline)
+
+                }
+                Divider()
+                Text("About Abidjan")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+                Text("Descriptive text goes here.")
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
